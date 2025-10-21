@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 class Program
 {
@@ -70,4 +70,15 @@ class Program
     return sum /= array.Length;   
 }
 
+    static void CopyPositiveElements(int[] source, int[] destination, ref int destIndex)
+    {
+        foreach (int num in source)
+        {
+            if (num > 0)
+            {
+                destination[destIndex] = num;
+                destIndex++;
+            }
+        }
+    }
 }
