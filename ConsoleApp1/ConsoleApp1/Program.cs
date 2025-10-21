@@ -2,11 +2,6 @@
 using static System.Runtime.InteropServices.JavaScript.JSType;
 class Program
 {
-    ///<summary> Копирует все положительные элементы из исходного массива в новый массив.</summary>
-    ///<param name="arr">Исходный одномерный целочисленный массив. </param>
-    /// <returns>Новый массив, содержащий только положительные числа из исходного массива.
-    /// Если положительных чисел нет, возвращается пустой массив (длиной 0).</returns>
-    ///  Функция для копирования положительных элементов
 
     static void Main()
     /// Ввод размеров массивов
@@ -64,29 +59,5 @@ class Program
         Console.WriteLine("\nСреднее арифм.массива С");
         Console.Write(array(arrayC));
     }
-    static void CopyPositiveElements(int[] source, int[] destination, ref int destIndex)
-    {
-        foreach (int num in source)
-        {
-            if (num > 0)
-            {
-                destination[destIndex] = num;
-                destIndex++;
-            }
-        }
-    }
-    static int array(int[] array)
-    // среднее арифметическое массива с
-    {
-        int sum = 0;
-        for (int i = 0; i <= array.Length - 1; i++)
-        {
-            sum += array[i];
-        }
-        return sum /= array.Length;
-    }
 
 }
-/// число операторов условий(CL - абсолютная сложность) ("if()") = 2 
-/// Общее количество операторов = 184 
-/// относительная сложность = 2 / 184 = 1/92  или 0,010869565217391304
