@@ -59,5 +59,15 @@ class Program
         Console.WriteLine("\nСреднее арифм.массива С");
         Console.Write(array(arrayC));
     }
+    static int array(int[] array)   
+// среднее арифметическое массива с   
+{   
+    int sum = 0;   
+    for (int i = 0 ; i <= array.Length-1; i++)   
+    {   
+        sum += array[i];   
+    }   
+    return sum /= array.Length;   
+}
 
 }
