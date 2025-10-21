@@ -59,5 +59,15 @@ class Program
         Console.WriteLine("\nСреднее арифм.массива С");
         Console.Write(array(arrayC));
     }
-
+    static void CopyPositiveElements(int[] source, int[] destination, ref int destIndex)
+    {
+        foreach (int num in source)
+        {
+            if (num > 0)
+            {
+                destination[destIndex] = num;
+                destIndex++;
+            }
+        }
+    }
 }
